@@ -19,4 +19,9 @@ public class ActionButton : MonoBehaviour
     {
         _text = GetComponentInChildren<Text>();
     }
+
+    public void OnActionButtonClick()
+    {
+        Cat.Instance.Interact(Name);
+    }
 }
