@@ -6,12 +6,8 @@
 /// </summary>
 public enum InteractionType
 {
-    [Description("Поиграть")]
     Play,
-    [Description("Накормить")]
     Feed, 
-    [Description("Погладить")]
     Pet,
-    [Description("Дать пинка")]
     Attack
 }
