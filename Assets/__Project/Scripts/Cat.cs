@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Animator))]
@@ -7,13 +8,13 @@ public class Cat : MonoBehaviour
     public static Cat Instance;
 
     private Animator _animator;
-    private Text _text;
+    private TextMeshProUGUI _text;
     
     private void Awake()
     {
         Instance = this;
         _animator = GetComponent<Animator>();
-        _text = GetComponentInChildren<Text>();
+        _text = GetComponentInChildren<TextMeshProUGUI>();
         
         if(_text == null) Debug.LogWarning("No text object in Cat's children");
     }

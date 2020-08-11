@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 using static InteractionsScriptableObject;
 
 public class InteractionButton : MonoBehaviour
 {
-    private Text _text;
+    private TextMeshProUGUI _text;
     private ParticleSystem _particleSystem;
 
     private InteractionData _interactionData;
@@ -28,8 +29,7 @@ public class InteractionButton : MonoBehaviour
 
     private void Awake()
     {
-        _text = GetComponentInChildren<Text>();
-        _particleSystem = GetComponent<ParticleSystem>();
+        _text = GetComponentInChildren<TextMeshProUGUI>();
     }
 
     public void OnActionButtonClick()
