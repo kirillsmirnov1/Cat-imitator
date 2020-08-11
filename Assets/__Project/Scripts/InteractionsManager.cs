@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 
 [RequireComponent(typeof(HorizontalLayoutGroup))]
-public class ActionButtons : MonoBehaviour
+public class InteractionsManager : MonoBehaviour
 {
     public GameObject actionButtonPrefab;
     public InteractionsScriptableObject interactionsData;
@@ -14,7 +14,7 @@ public class ActionButtons : MonoBehaviour
         
         foreach (var interactionData in interactionsData.interactions)
         {
-            var button = Instantiate(actionButtonPrefab, transform).GetComponent<ActionButton>();
+            var button = Instantiate(actionButtonPrefab, transform).GetComponent<InteractionButton>();
             button.InteractionData = interactionData;
         }
     }

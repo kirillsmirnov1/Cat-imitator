@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using static InteractionsScriptableObject;
 
-public class ActionButton : MonoBehaviour
+public class InteractionButton : MonoBehaviour
 {
     private Text _text;
     private ParticleSystem _particleSystem;
