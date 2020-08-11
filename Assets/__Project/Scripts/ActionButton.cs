@@ -4,14 +4,14 @@ using UnityEngine.UI;
 public class ActionButton : MonoBehaviour
 {
     private Text _text;
-    private string _name;
-    public string Name
+    private InteractionType _type;
+    public InteractionType Type
     {
-        get => _name;
+        get => _type;
         set
         {
-            _name = value;
-            _text.text = _name;
+            _type = value;
+            _text.text = _type.GetDescription();
         }
     }
 
@@ -22,6 +22,6 @@ public class ActionButton : MonoBehaviour
 
     public void OnActionButtonClick()
     {
-        Cat.Instance.Interact(Name);
+        Cat.Instance.Interact(Type);
     }
 }

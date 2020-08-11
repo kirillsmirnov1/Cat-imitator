@@ -9,7 +9,7 @@ public class Cat : MonoBehaviour
         Instance = this;
     }
 
-    public void Interact(string interaction)
+    public void Interact(InteractionType interaction)
     {
         Debug.Log($"Interaction: {interaction}");
     }
