@@ -5,13 +5,17 @@ using UnityEngine.UI;
 public class ActionButtons : MonoBehaviour
 {
     public GameObject actionButtonPrefab;
+    public InteractionsScriptableObject interactionsData;
 
     private void Awake()
     {
-        foreach (var interactionType in EnumUtils.GetValues<InteractionType>())
+        if(actionButtonPrefab == null) Debug.LogWarning($"{gameObject.name}: missing actionButtonPrefab");
+        if(interactionsData == null) Debug.LogWarning($"{gameObject.name}: missing interactionsData");
+        
+        foreach (var interactionData in interactionsData.interactions)
         {
             var button = Instantiate(actionButtonPrefab, transform).GetComponent<ActionButton>();
-            button.Type = interactionType;
+            button.InteractionData = interactionData;
         }
     }
 }

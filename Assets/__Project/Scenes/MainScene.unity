@@ -600,6 +600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionButtonPrefab: {fileID: 1364477424572849842, guid: 0c9b60f051cb10c43a9d24f482253790,
     type: 3}
+  interactionsData: {fileID: 11400000, guid: f49f87aa49d105e42a5c3542392930f7, type: 2}
 --- !u!1 &1542744709
 GameObject:
   m_ObjectHideFlags: 0
