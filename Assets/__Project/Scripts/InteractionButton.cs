@@ -16,8 +16,13 @@ public class InteractionButton : MonoBehaviour
         {
             _interactionData = value;
             _text.text = _interactionData.label;
-            _particleSystem = Instantiate(_interactionData.particleSystemPrefab, ParticleSystemAnchor.Instance.transform)
-                .GetComponent<ParticleSystem>();
+
+            if (_interactionData.particleSystemPrefab != null)
+            {
+                _particleSystem = Instantiate(_interactionData.particleSystemPrefab,
+                        ParticleSystemAnchor.Instance.transform)
+                    .GetComponent<ParticleSystem>();
+            }
         }
     }
 
@@ -29,7 +34,7 @@ public class InteractionButton : MonoBehaviour
 
     public void OnActionButtonClick()
     {
-        _particleSystem.Play();
+        if(_particleSystem != null) _particleSystem.Play();
         Cat.Instance.Interact(InteractionData.type);
     }
 }
