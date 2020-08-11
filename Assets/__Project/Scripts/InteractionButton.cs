@@ -16,7 +16,8 @@ public class InteractionButton : MonoBehaviour
         {
             _interactionData = value;
             _text.text = _interactionData.label;
-            _particleSystem = Instantiate(_interactionData.particleSystemPrefab).GetComponent<ParticleSystem>();
+            _particleSystem = Instantiate(_interactionData.particleSystemPrefab, ParticleSystemAnchor.Instance.transform)
+                .GetComponent<ParticleSystem>();
         }
     }
 
