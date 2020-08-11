@@ -551,10 +551,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f5dead925cebba4b9aae7fdd8e39a3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonNames:
-  - "\u041F\u043E\u0438\u0433\u0440\u0430\u0442\u044C"
-  - "\u041D\u0430\u043A\u043E\u0440\u043C\u0438\u0442\u044C"
-  - "\u041F\u043E\u0433\u043B\u0430\u0434\u0438\u0442\u044C"
-  - "\u0414\u0430\u0442\u044C \u043F\u0438\u043D\u043A\u0430"
   actionButtonPrefab: {fileID: 1364477424572849842, guid: 0c9b60f051cb10c43a9d24f482253790,
     type: 3}
