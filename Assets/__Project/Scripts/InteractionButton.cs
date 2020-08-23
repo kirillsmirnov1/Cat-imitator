@@ -1,6 +1,5 @@
 ﻿using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using static InteractionsScriptableObject;
 
 public class InteractionButton : MonoBehaviour

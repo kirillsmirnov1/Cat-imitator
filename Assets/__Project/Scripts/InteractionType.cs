@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-
-/// <summary>
+﻿/// <summary>
 /// Available types of interactions with cat.
 /// <para>Names of types must match names of triggers in CatAnimationController</para>
 /// </summary>
