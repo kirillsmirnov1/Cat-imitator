@@ -9,9 +9,9 @@ public class InteractionsManager : MonoBehaviour
 
     private void Awake()
     {
-        if(actionButtonPrefab == null) Debug.LogWarning($"{gameObject.name}: missing actionButtonPrefab");
-        if(interactionsData == null) Debug.LogWarning($"{gameObject.name}: missing interactionsData");
-        
+        gameObject.NullCheck(actionButtonPrefab, "actionButtonPrefab");
+        gameObject.NullCheck(interactionsData, "interactionsData");
+
         foreach (var interactionData in interactionsData.interactions)
         {
             var button = Instantiate(actionButtonPrefab, transform).GetComponent<InteractionButton>();
